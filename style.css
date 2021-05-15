@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ==============================
+!IMPORTANT COLOR
+================================= */
+ul,
+li,
+a{
+    list-style: none !important;
+    text-decoration: none !important;
+}
+.active{
+    color: var(--logo-color) !important;
+}
+.logo span{
+    color: var(--logo-color-indo) !important;
+}
+
+
+/* ==============================
+COLOR CODE ROOT
+================================= */
+:root{
+    --black-color: #000;
+    --white-color: #fff;
+    --text-color-primary: #978F8F;
+    --text-color-secondary: #404040;
+    --logo-color: #F39595; /* Explore */
+    --hover-button: #fdb7b7;
+    --logo-color-indo: #978F8F; /* Indo */
+    --background-color-primary: #E4E1E2;
+    --background-color-secondary: #9F9D9D;
+    --box-gray: #C4C4C4;
+    --background-footer: #E9F4F6;
+    --font-size-big: 60px;
+    --font-size-medium: 40px;
+    --font-size-twenty-five: 25px;
+    --font-size-twenty: 20px;
+    --font-size-small: 12px;
+}
+
+/* ==============================
+BODY FONT FACE
+================================= */
+body
+{
+    font-family: 'Roboto', sans-serif;
+    color: var(--black-color);
+    box-sizing: border-box;
+    background-color: var(--background-color-primary);
+}
+
+/* ==============================
+START HEADER CSS
+================================= */
+.header{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url(./assets/bg.jpg) center no-repeat;
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    height: 12vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+}
+.logo h1{
+    color: var(--logo-color);
+}
+.nav-link,
+.link{
+    font-weight: bold;
+}
+.nav-link{
+    display: flex;
+}
+.link{
+    position: relative;
+    color: var(--text-color-primary);
+    margin: 0px 25px;
+}
+.link:hover{
+    color: var(--logo-color);
+    transition: .4s;
+}
+.link::before{
+    content: '';
+    position: absolute;
+    margin-top: 20px;
+    background-color: var(--logo-color);
+    height: 3px;
+    width: 0%;
+    border-radius: 20px;
+    transition: .4s;
+}
+.link:hover::before{
+    width: 100%;
+}
+
+/* ==============================
+HAMBURGER CSS
+================================= */
+.change .line-1{
+    transform: rotate(-45deg) translate(-10px, 6px);
+}
+.change .line-2{
+    opacity: 0;
+}
+.change .line-3{
+    transform: rotate(45deg) translate(-7px, -4px);
+}
+.line{
+    height: 3px;
+    width: 100%;
+    background-color: var(--logo-color);
+    border-radius: 20px;
+    transition: .4s;
+}
+.change.nav-Links{
+    top: 0px;
+}
+
+/* ==============================
+HERO TEXT AND IMAGE
+================================= */
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 88vh;
+}
+.hero-Text{
+    text-shadow: 1px 2px 2px var(--white-color);
+}
+.hero-Text h1{
+    font-size: var(--font-size-big);
+    max-width: 400px;
+}
+.hero-Text span{
+    color: var(--logo-color);
+}
+.p-Text,
+.p-Text p{
+    letter-spacing: 1.5px;
+    font-size: var(--font-size-twenty-five);
+    font-weight: bold;  
+    max-width: 600px;
+    color: var(--text-color-primary);
+    padding-top: 10px;
+}
+.p-Text p span{
+    color: var(--black-color);
+}
+.content-Left,
+.images{
+    margin: 0px 100px;
+    margin-top: -100px;
+}
+.images{
+    height: 450px;
+    width: 450px;
+}
+.button{
+    margin-top: 50px;
+}
+.button a{
+    padding: 10px 40px;
+    background-color: var(--logo-color);
+    color: var(--black-color);
+    border-radius: 50px;
+    font-weight: 800;
+}
+.button a:hover{
+    background-color: var(--hover-button);
+    transition: .4s;
+}
+
+/* ==============================
+SECTION ONE
+================================= */
+.section-One{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 50vh;
+    padding-top: 10vh;
+}
+.head-Dest{
+    font-size: var(--font-size-medium);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.box-Content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.box-Right,
+.box-Left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 350px;
+    width: 800px;
+    background-color: var(--background-color-secondary);
+    border-radius: 20px;
+    box-shadow: 1px 2px 10px var(--white-color);
+}
+.text-Content{
+    color: var(--text-color-secondary);
+    max-width: 500px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.bali{
+    padding-left: 10em;
+}
+.papua{
+    font-size: 18px;
+    margin-left: -120px;
+}
+.button-Dest{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--logo-color);
+    margin-top: 20px;
+    border-radius: 50px;
+    padding: 13px 70px;
+    transition: .4s;
+    cursor: pointer;
+    box-shadow: .8px 1px 5px var(--black-color);
+}
+.button-Dest a{
+    color: var(--black-color);
+    font-weight: bold;
+}
+.button-Dest:hover {
+    background-color: var(--hover-button);
+}
+.box-Image {
+    z-index: 100;
+}
+.box-Image img{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 10px var(--logo-color);
+}
+.box-Image img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: .4s;
+}
+.img-bali{
+    margin-right: -150px;
+}
+.img-papua {
+    margin-left: -150px;
+}
+
+/* ==============================
+SECTION TOW OR CONTACT
+================================= */
+.section-Two{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .2),rgba(0, 0, 0, .2)), url(./assets/papua.jpg) center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contact-Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.title-Contact h1{
+    font-size: var(--font-size-medium);
+    margin-top: -100px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.box input,
+.box button{
+    box-shadow: 1px 2px 5px var(--black-color);
+}
+.box input{
+    background-color: var(--white-color);
+    height: 60px;
+    width: 500px;
+    border-radius: 50px;
+    border: none;
+}
+.box input::placeholder {
+    font-size: var(--font-size-twenty);
+    padding-left: 20px;
+}
+.box button{
+    height: 50px;
+    width: 100px;
+    margin-left: 5px;
+    background-color: var(--logo-color);
+    color: var(--white-color);
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.box button:hover{
+    background-color: var(--hover-button);
+    transition: .4s;
+    color: var(--black-color);
+}
+.btn-more{
+    background-color: var(--logo-color);
+    border: none;   
+    padding: 20px 50px;
+    border-radius: 50px; 
+    margin-top: 150px;
+    cursor: pointer;
+    box-shadow: 1px 2px 5px var(--black-color);
+    transition: .4s;
+}
+.btn-more:hover{
+    background-color: var(--hover-button);
+}
+.btn-more a{
+    color: var(--black-color);
+    font-weight: 600;
+}
+
+/* ==============================
+FOOTER
+================================= */
+.footer{
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--background-footer);
+}
+.dev{
+    font-size: 15px;
+    margin-top: 20px;
+}
+.dev a{
+    color: var(--black-color);
+    font-weight: bold;
+    font-size: 17px;
+}
+.dev a:hover{
+    color: var(--text-color-secondary);
+}
+.years{
+    font-weight: bold;
+    color: var(--black-color);
+}
+
+/* ==============================
+RESPONSIVE ALL MEDIA
+================================= */
+@media screen and (max-width: 1000px) {
+    .header{
+        height: auto;
+    }
+    .nav-Links{
+        position: fixed;
+        top: -1000px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color: var(--background-color-primary);
+        transition: .3s;
+        text-align: center;
+        z-index: 1000;
+    }
+    .nav-link{
+        flex-direction: column;
+        justify-content: space-around;
+        height: 80vh;
+    }
+    .hamburger {
+        position: fixed;
+        top: 20px;
+        right: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 30px;
+        width: 35px;
+        cursor: pointer;
+        z-index: 1000;
+    }   
+    .container{
+        grid-template-columns: 1fr;
+        padding-top: 150px;
+    }
+    .content-Right{
+        padding-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .images{
+        height: 350px;
+        width: 350px;
+    }
+
+    .box-Content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .box-Right,
+    .box-Left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 600px;
+    }
+    .bali {
+        margin-left: -150px;
+    }
+    .papua{
+        margin-right: -150px;
+    }
+    .img-bali{
+        margin-left: -150px;
+        margin-bottom: -30px;
+    }
+    .img-papua{
+        margin-right: -150px;
+        margin-top: -30px;
+    }
+    .box{
+        width: 300px;
+    }
+    .box button{
+        font-size: var(--font-size-small);
+        width: 170px;
+        height: 40px;
+    }
+    .box input::placeholder{
+        font-size: 15px;
+    }
+
+}
+@media screen and (max-width: 700px) {
+    .hero-Text h1{
+        font-size: 50px;
+    }
+    .p-Text p{
+        font-size: var(--font-size-twenty);
+    }
+    .images{
+        height: 300px;
+        width: 300px;
+    }
+    .head-Dest{
+        font-size: 30px;
+    }
+    .box-Image img{
+        height: 250px;
+        width: 250px;
+    }
+    .box-Right,
+    .box-Left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 500px;
+    }
+    .text-Content{
+        font-size: 15px;
+    }
+    .footer{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
